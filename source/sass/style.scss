@@ -2,4 +2,18 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "common/fonts";
 @import "common/scaffolding";
+@import "common/mixins";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
+
+// blocks
+@import "blocks/best-deals";
+@import "blocks/button";
+@import "blocks/descriptions-item";
+@import "blocks/features-item";
+@import "blocks/features";
+@import "blocks/main-nav";
+@import "blocks/news";
+@import "blocks/news-item";
+@import "blocks/publications";
+@import "blocks/publication-item";
+@import "blocks/tabs";

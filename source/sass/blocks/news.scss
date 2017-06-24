@@ -1,0 +1,26 @@
+.news {
+  text-align: center;
+
+  &__title {
+    @include visually-hidden;
+  }
+
+  &__list {
+    @include list-reset;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    width: 336px;
+  }
+
+  &__all-news {
+    width: 336px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

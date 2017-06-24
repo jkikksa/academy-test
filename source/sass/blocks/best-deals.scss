@@ -1,0 +1,47 @@
+.best-deals {
+  color: #323232;
+  background-color: #d8dbe6;
+
+  &__inner {
+    @include container;
+  }
+
+  &__panel {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    color: #323232;
+    background-color: #eff2f9;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 38px;
+    text-align: center;
+    color: #002672;
+  }
+
+  &__list {
+    @include list-reset;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-weight: 300;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted #c9c9c9;
+  }
+
+  &__descriptions-list {
+    @include list-reset;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

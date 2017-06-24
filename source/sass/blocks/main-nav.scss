@@ -1,0 +1,32 @@
+.main-nav {
+  color: #ffffff;
+  background-color: #002672;
+
+  &__inner {
+    @include container;
+  }
+
+  &__list {
+    @include list-reset;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 15px;
+    line-height: 18px;
+    color: inherit;
+    text-decoration: none;
+
+    &--active {
+      color: #fff200;
+    }
+  }
+}

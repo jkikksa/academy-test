@@ -1,0 +1,23 @@
+.features-item {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  &__title {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 83px;
+    line-height: 84px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 100;
+    font-size: 21px;
+    line-height: 22px;
+  }
+}

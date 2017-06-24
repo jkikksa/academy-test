@@ -1,0 +1,19 @@
+.descriptions-item {
+
+  &__title {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #123885;
+    background-color: #fff200;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #323232;
+  }
+}
