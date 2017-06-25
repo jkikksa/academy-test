@@ -1,17 +1,39 @@
 .descriptions-item {
+  position: relative;
+  min-height: 293px;
+  padding-left: 403px;
+  padding-right: 200px;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    width: 293px;
+    height: 293px;
+  }
 
   &__title {
-    display: inline-block;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding-right: 50px;
     font-weight: 700;
+    font-size: 34px;
+    line-height: 34px;
     color: #123885;
+  }
+
+  &__title-text {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: #fff200;
   }
 
   &__text {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-size: 16px;
     line-height: 20px;
     color: #323232;

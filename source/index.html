@@ -83,10 +83,10 @@
           </section>
         </li>
       </ul>
-      <div class="features__controls">
-        <button class="features__arrow" type="button">Назад</button>
-        <button class="features__arrow" type="button">Вперед</button>
-      </div>
+    </div>
+    <div class="features__controls">
+      <button class="features__arrow features__arrow--prev" type="button" title="Предыдущий слайд">Предыдущий слайд</button>
+      <button class="features__arrow features__arrow--next" type="button" title="Следующий слайд">Следующий слайд</button>
     </div>
   </section>
   <section class="best-deals">
@@ -95,44 +95,74 @@
         <h2 class="best-deals__title">Выгодные предложения для различных направлений бизнеса:</h2>
         <ul class="best-deals__list">
           <li class="best-deals__item">
-            <a class="best-deals__link" href="#">Ритейл</a>
-          </li>
-          <li class="best-deals__item best-deals__item--active">
-            <a class="best-deals__link" href="#">Организация Wi FI зон</a>
-          </li>
-          <li class="best-deals__item">
-            <a class="best-deals__link" href="#">Call-центры</a>
+            <a class="best-deals__link best-deals__link--retail" href="#tab1">
+              <span class="best-deals__link-text">Ритейл</span>
+            </a>
           </li>
           <li class="best-deals__item">
-            <a class="best-deals__link" href="#">Логистика </a>
+            <a class="best-deals__link best-deals__link--wifi best-deals__link--active" href="#tab2">
+              <span class="best-deals__link-text">Организация Wi FI зон</span>
+            </a>
+          </li>
+          <li class="best-deals__item">
+            <a class="best-deals__link best-deals__link--call-center" href="#tab3">
+              <span class="best-deals__link-text">Call-центры</span>
+            </a>
+          </li>
+          <li class="best-deals__item">
+            <a class="best-deals__link best-deals__link--logistics" href="#tab4">
+              <span class="best-deals__link-text">Логистика</span>
+            </a>
           </li>
         </ul>
       </div>
       <ul class="best-deals__descriptions-list">
-        <li class="best-deals__descriptions-item">
+        <li class="best-deals__descriptions-item" id="tab1">
           <section class="descriptions-item">
-            <h3 class="descriptions-item__title">Удобный интернет-серфинг в общественных местах</h3>
+            <div class="descriptions-item__image">
+              <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках" width="293" height="293">
+            </div>
+            <h3 class="descriptions-item__title">
+              <div class="descriptions-item__title-text">Ритейл</div>
+            </h3>
             <p class="descriptions-item__text">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
             <a class="button descriptions-item__link" href="#">Запросить коммерческое предложение</a>
           </section>
         </li>
-        <li class="best-deals__descriptions-item best-deals__descriptions-item--active">
+        <li class="best-deals__descriptions-item best-deals__descriptions-item--active" id="tab2">
           <section class="descriptions-item">
-            <h3 class="descriptions-item__title">Удобный интернет-серфинг в общественных местах</h3>
+            <div class="descriptions-item__image">
+              <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках" width="293" height="293">
+            </div>
+            <h3 class="descriptions-item__title">
+              <div class="descriptions-item__title-text">Удобный</div>
+              <div class="descriptions-item__title-text">интернет-серфинг</div>
+              <div class="descriptions-item__title-text">в общественных местаx</div>
+            </h3>
             <p class="descriptions-item__text">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
             <a class="button descriptions-item__link" href="#">Запросить коммерческое предложение</a>
           </section>
         </li>
-        <li class="best-deals__descriptions-item">
+        <li class="best-deals__descriptions-item" id="tab3">
           <section class="descriptions-item">
-            <h3 class="descriptions-item__title">Удобный интернет-серфинг в общественных местах</h3>
+            <div class="descriptions-item__image">
+              <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках" width="293" height="293">
+            </div>
+            <h3 class="descriptions-item__title">
+              <div class="descriptions-item__title-text">Call-центры</div>
+            </h3>
             <p class="descriptions-item__text">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
             <a class="button descriptions-item__link" href="#">Запросить коммерческое предложение</a>
           </section>
         </li>
-        <li class="best-deals__descriptions-item">
+        <li class="best-deals__descriptions-item" id="tab4">
           <section class="descriptions-item">
-            <h3 class="descriptions-item__title">Удобный интернет-серфинг в общественных местах</h3>
+            <div class="descriptions-item__image">
+              <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках" width="293" height="293">
+            </div>
+            <h3 class="descriptions-item__title">
+              <div class="descriptions-item__title-text">Логистика</div>
+            </h3>
             <p class="descriptions-item__text">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
             <a class="button descriptions-item__link" href="#">Запросить коммерческое предложение</a>
           </section>
@@ -143,14 +173,14 @@
   <div class="tabs">
     <div class="tabs__inner">
       <ul class="tabs__nav">
-        <li class="tabs__item tabs__item--active">
-          <a class="tabs__link" href="#">Новости</a>
+        <li class="tabs__item">
+          <a class="tabs__link tabs__link--active" href="#news">Новости</a>
         </li>
         <li class="tabs__item">
-          <a class="tabs__link" href="#">Публикации</a>
+          <a class="tabs__link" href="#publications">Публикации</a>
         </li>
       </ul>
-      <section class="news">
+      <section class="news tabs__content tabs__content--active" id="news">
         <h2 class="news__title">Новости</h2>
         <ul class="news__list">
           <li class="news__item">
@@ -189,7 +219,7 @@
         </ul>
         <a class="button news__all-news" href="#">Еще новости</a>
       </section>
-      <section class="publications">
+      <section class="publications tabs__content" id="publications">
         <h3 class="publications__title">Публикации</h3>
         <ul class="publications__list">
           <li class="publications__item">
@@ -209,7 +239,7 @@
                 «ПРОСТО Телеком» приступает к оказанию услуг телефонии в Пензе
               </h3>
               <p class="publication-item__content">
-                Корпоративные клиенты в Пензе теперь могут приобрести городские телефонные номера у оператора связи "ПРОСТО Телеком"
+                17 лет назад в Петербурге была основана компания "ПРОСТО Телеком". За эти годы компания из небольшого интернет-провайдера превратилась в универсального оператора связи федерального масштаба.
               </p>
               <div class="publication-item__date">7 ноября 2014</div>
             </article>
@@ -226,6 +256,7 @@
             </article>
           </li>
         </ul>
+        <a class="button publications__all" href="#">Еще публикации</a>
       </section>
     </div>
   </div>

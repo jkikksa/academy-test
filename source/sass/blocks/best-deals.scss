@@ -4,18 +4,38 @@
 
   &__inner {
     @include container;
+
+    position: relative;
+    padding-top: 230px;
   }
 
   &__panel {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
     padding-top: 50px;
     padding-bottom: 40px;
+    padding-left: 85px;
+    padding-right: 85px;
     color: #323232;
     background-color: #eff2f9;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 456px;
+      width: 30px;
+      height: 30px;
+      background-color: #eff2f9;
+      transform: rotate(45deg);
+    }
   }
 
   &__title {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-weight: 700;
     font-size: 36px;
     line-height: 38px;
@@ -32,16 +52,111 @@
   }
 
   &__link {
+    position: relative;
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 80px;
+    padding-right: 40px;
     font-weight: 300;
+    font-size: 18px;
+    line-height: 50px;
     color: inherit;
     text-decoration: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 62px;
+      height: 62px;
+      background-color: #123885;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--active {
+
+      &::before {
+        background-color: #fff200;
+      }
+    }
+
+    &--retail {
+
+      &::before {
+        background-image: url("../img/inline/icon-basket--yellow.png");
+      }
+
+      &.best-deals__link--active {
+
+        &::before {
+          background-image: url("../img/inline/icon-basket--blue.png");
+        }
+      }
+    }
+
+    &--wifi {
+
+      &::before {
+        background-image: url("../img/inline/icon-wifi--yellow.png");
+      }
+
+      &.best-deals__link--active {
+
+        &::before {
+          background-image: url("../img/inline/icon-wifi--blue.png");
+        }
+      }
+    }
+
+    &--call-center {
+
+      &::before {
+        background-image: url("../img/inline/icon-phone--yellow.png");
+      }
+
+      &.best-deals__link--active {
+
+        &::before {
+          background-image: url("../img/inline/icon-phone--blue.png");
+        }
+      }
+    }
+
+    &--logistics {
+
+      &::before {
+        background-image: url("../img/inline/icon-arrows--yellow.png");
+      }
+
+      &.best-deals__link--active {
+
+        &::before {
+          background-image: url("../img/inline/icon-arrows--blue.png");
+        }
+      }
+    }
+  }
+
+  &__link-text {
     border-bottom: 1px dotted #c9c9c9;
   }
 
   &__descriptions-list {
     @include list-reset;
 
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 78px;
+  }
+
+  &__descriptions-item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
   }
 }

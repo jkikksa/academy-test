@@ -17,27 +17,6 @@
     margin-bottom: 40px;
   }
 
-  &__item {
-
-    &--active {
-
-      .tabs__link {
-        position: relative;
-        color: #123885;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 11px;
-          width: calc(100% - 22px);
-          height: 4px;
-          background-color: #fff200;
-        }
-      }
-    }
-  }
-
   &__link {
     display: block;
     padding-top: 10px;
@@ -49,5 +28,28 @@
     line-height: 26px;
     color: #c0c0c0;
     text-decoration: none;
+
+    &--active {
+      position: relative;
+      color: #123885;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 11px;
+        width: calc(100% - 22px);
+        height: 4px;
+        background-color: #fff200;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &--active {
+      display: block;
+    }
   }
 }
