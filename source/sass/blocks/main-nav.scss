@@ -2,8 +2,9 @@
   color: #ffffff;
   background-color: #002672;
 
-  &__inner {
-    @include container;
+  @media (max-width: $mobile-width) {
+    color: #ffffff;
+    background-color: #123885;
   }
 
   &__list {
@@ -12,6 +13,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1072px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+      max-width: none;
+    }
   }
 
   &__link {
@@ -28,5 +37,9 @@
     &--active {
       color: #fff200;
     }
+  }
+
+  &__sub-nav {
+    display: none;
   }
 }

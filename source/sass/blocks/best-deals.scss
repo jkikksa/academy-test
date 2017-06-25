@@ -20,6 +20,7 @@
     padding-right: 85px;
     color: #323232;
     background-color: #eff2f9;
+    box-sizing: border-box;
 
     &::after {
       content: "";
@@ -57,7 +58,7 @@
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 80px;
-    padding-right: 40px;
+    padding-right: 20px;
     font-weight: 300;
     font-size: 18px;
     line-height: 50px;

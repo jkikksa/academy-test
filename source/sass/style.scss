@@ -1,6 +1,7 @@
 // common
 @import "../../node_modules/normalize.css/normalize";
 @import "common/fonts";
+@import "common/variables";
 @import "common/scaffolding";
 @import "common/mixins";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
@@ -12,8 +13,11 @@
 @import "blocks/features-item";
 @import "blocks/features";
 @import "blocks/main-nav";
-@import "blocks/news";
 @import "blocks/news-item";
-@import "blocks/publications";
+@import "blocks/news";
+@import "blocks/page-header";
+@import "blocks/page-title";
 @import "blocks/publication-item";
+@import "blocks/publications";
 @import "blocks/tabs";
+@import "blocks/user-block";
