@@ -1,0 +1,30 @@
+.field-text {
+
+  &__input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: inherit;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0;
+
+    &:disabled {
+      background-color: #fff42c;
+    }
+
+    &::placeholder {
+      font-weight: 300;
+      font-size: 14px;
+      color: #b3b3b3;
+    }
+  }
+}
