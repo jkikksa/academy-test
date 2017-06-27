@@ -2,7 +2,110 @@
 
   &__list {
     @include list-reset;
+
     display: flex;
+    align-items: center;
+    min-height: 100%;
   }
 
+  &__item {
+    position: relative;
+    margin-left: 4px;
+    margin-right: 4px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #eaeaea;
+    border-radius: 50%;
+
+    @media (max-width: $mobile-width) {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:hover {
+      background-color: #fff200;
+      border-color: #fff200;
+
+      & + .user-block__item-tooltip {
+        display: block;
+
+        @media (max-width: $mobile-width) {
+          display: none;
+        }
+      }
+    }
+
+    &--acount {
+      background-image: url("../img/inline/icon-avatar--black.png");
+
+      @media (max-width: $mobile-width) {
+        background-image: url("../img/inline/icon-avatar--white.png");
+      }
+
+      &:hover {
+        @media (max-width: $mobile-width) {
+          background-image: url("../img/inline/icon-avatar--black.png");
+        }
+      }
+    }
+
+    &--callback {
+      background-image: url("../img/inline/icon-smallphone--black.png");
+
+      @media (max-width: $mobile-width) {
+        background-image: url("../img/inline/icon-smallphone--white.png");
+      }
+
+      &:hover {
+        @media (max-width: $mobile-width) {
+          background-image: url("../img/inline/icon-smallphone--black.png");
+        }
+      }
+    }
+
+    &--search {
+      background-image: url("../img/inline/icon-search--black.png");
+
+      @media (max-width: $mobile-width) {
+        background-image: url("../img/inline/icon-search--white.png");
+      }
+
+      &:hover {
+        @media (max-width: $mobile-width) {
+          background-image: url("../img/inline/icon-search--black.png");
+        }
+      }
+    }
+  }
+
+  &__item-tooltip {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    z-index: 2;
+    display: none;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #ffffff;
+    white-space: nowrap;
+    background-color: #000000;
+  }
 }

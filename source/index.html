@@ -10,13 +10,15 @@
 <body>
   <h1 class="page-title">Prosto Telecom</h1>
   <header class="page-header">
+    <button class="page-header__open" type="button" title="Открыть меню">Открыть меню</button>
     <div class="page-header__logo">
       <img src="img/logo.png" width="198" height="47" alt="Prosto Telecom" title="Prosto Telecom">
     </div>
     <div class="page-header__inner">
+      <button class="page-header__close" type="button" title="Закрыть меню">Закрыть меню</button>
       <div class="page-header__top-wrapper">
         <div class="page-header__city">
-          <div class="page-header__current-city">Санкт-Петербург</div>
+          <a class="page-header__current-city">Санкт-Петербург</a>
           <div class="page-header__current-tel">+7 (812) 366 40 40</div>
         </div>
         <ul class="page-header__tabs">
@@ -30,13 +32,16 @@
         <div class="user-block page-header__user-block">
           <ul class="user-block__list">
             <li class="user-block__item">
-              <a class="user-block__link" href="#">Личный кабинет</a>
+              <a class="user-block__link user-block__link--acount user-block__link--active" href="#">Личный кабинет</a>
+              <div class="user-block__item-tooltip">Личный кабинет</div>
             </li>
             <li class="user-block__item">
-              <a class="user-block__link" href="#">Обратный звонок</a>
+              <a class="user-block__link user-block__link--callback" href="#">Обратный звонок</a>
+              <div class="user-block__item-tooltip">Обратный звонок</div>
             </li>
             <li class="user-block__item">
-              <a class="user-block__link" href="#">Поиск</a>
+              <a class="user-block__link user-block__link--search" href="#">Поиск</a>
+              <div class="user-block__item-tooltip">Поиск</div>
             </li>
           </ul>
         </div>
@@ -44,7 +49,7 @@
       <nav class="main-nav page-header__nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Продукты и услуги</a>
+            <a class="main-nav__link main-nav__link--collapsed" href="#">Продукты и услуги</a>
             <ul class="main-nav__sub-nav">
               <li class="main-nav__sub-item">
                 <a class="main-nav__sub-link" href="#">Интернет</a>
@@ -58,7 +63,7 @@
             </ul>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">Решения</a>
+            <a class="main-nav__link main-nav__link--collapsed" href="#">Решения</a>
             <ul class="main-nav__sub-nav">
               <li class="main-nav__sub-item">
                 <a class="main-nav__sub-link" href="#">Интернет</a>
@@ -72,7 +77,7 @@
             </ul>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Облачные сервисы</a>
+            <a class="main-nav__link main-nav__link--collapsed" href="#">Облачные сервисы</a>
             <ul class="main-nav__sub-nav">
               <li class="main-nav__sub-item">
                 <a class="main-nav__sub-link" href="#">Интернет</a>
@@ -84,6 +89,20 @@
                 <a class="main-nav__sub-link" href="#">Каналы передачи данных</a>
               </li>
             </ul>
+          </li>
+        </ul>
+        <ul class="main-nav__secondary-nav">
+          <li class="main-nav__secondary-item">
+            <a class="main-nav__secondary-link" href="#">О компании</a>
+          </li>
+          <li class="main-nav__secondary-item">
+            <a class="main-nav__secondary-link" href="#">Новости</a>
+          </li>
+          <li class="main-nav__secondary-item">
+            <a class="main-nav__secondary-link" href="#">Вакансии</a>
+          </li>
+          <li class="main-nav__secondary-item">
+            <a class="main-nav__secondary-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -155,7 +174,10 @@
         <li class="best-deals__descriptions-item" id="tab1">
           <section class="descriptions-item">
             <div class="descriptions-item__image">
-              <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках" width="293" height="293">
+              <picture>
+                <source media="(max-width: 1296px)" srcset="img/image-internet-surfing--mobile.jpg">
+                <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках">
+              </picture>
             </div>
             <h3 class="descriptions-item__title">
               <div class="descriptions-item__title-text">Ритейл</div>
@@ -167,12 +189,16 @@
         <li class="best-deals__descriptions-item best-deals__descriptions-item--active" id="tab2">
           <section class="descriptions-item">
             <div class="descriptions-item__image">
-              <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках" width="293" height="293">
+              <picture>
+                <source media="(max-width: 1296px)" srcset="img/image-internet-surfing--mobile.jpg">
+                <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках">
+              </picture>
             </div>
             <h3 class="descriptions-item__title">
               <div class="descriptions-item__title-text">Удобный</div>
               <div class="descriptions-item__title-text">интернет-серфинг</div>
-              <div class="descriptions-item__title-text">в общественных местаx</div>
+              <div class="descriptions-item__title-text">в общественных</div>
+              <div class="descriptions-item__title-text">местаx</div>
             </h3>
             <p class="descriptions-item__text">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
             <a class="button descriptions-item__link" href="#">Запросить коммерческое предложение</a>
@@ -181,7 +207,10 @@
         <li class="best-deals__descriptions-item" id="tab3">
           <section class="descriptions-item">
             <div class="descriptions-item__image">
-              <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках" width="293" height="293">
+              <picture>
+                <source media="(max-width: 1296px)" srcset="img/image-internet-surfing--mobile.jpg">
+                <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках">
+              </picture>
             </div>
             <h3 class="descriptions-item__title">
               <div class="descriptions-item__title-text">Call-центры</div>
@@ -193,7 +222,10 @@
         <li class="best-deals__descriptions-item" id="tab4">
           <section class="descriptions-item">
             <div class="descriptions-item__image">
-              <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках" width="293" height="293">
+              <picture>
+                <source media="(max-width: 1296px)" srcset="img/image-internet-surfing--mobile.jpg">
+                <img src="img/image-internet-surfing.jpg" alt="молодой человек с телефоном в руках">
+              </picture>
             </div>
             <h3 class="descriptions-item__title">
               <div class="descriptions-item__title-text">Логистика</div>

@@ -20,6 +20,13 @@
     @media (max-width: $mobile-width) {
       display: block;
       max-width: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    @media (max-width: $mobile-width) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
   }
 
@@ -34,12 +41,123 @@
     color: inherit;
     text-decoration: none;
 
-    &--active {
+    @media (max-width: $mobile-width) {
+      position: relative;
+      padding-left: 0;
+      padding-right: 28px;
+      color: #fbf239;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/inline/icon-arrow-top--small--yellow.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:hover {
       color: #fff200;
+    }
+
+    &--collapsed {
+      @media (max-width: $mobile-width) {
+        color: #ffffff;
+      }
+
+      & + .main-nav__sub-nav {
+        @media (max-width: $mobile-width) {
+          display: none;
+        }
+      }
+
+      &::after {
+        @media (max-width: $mobile-width) {
+          background-image: url("../img/inline/icon-arrow-right--small.png");
+          transform: translateY(-50%) rotate(90deg);
+        }
+      }
     }
   }
 
   &__sub-nav {
+    @include list-reset;
+
     display: none;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__sub-link {
+    display: block;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(140, 171, 232, 0.8);
+    text-decoration: none;
+
+    &:hover {
+      color: #fbf239;
+    }
+  }
+
+  &__secondary-nav {
+    @include list-reset;
+
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__secondary-item {
+
+    &:last-child {
+
+      .main-nav__secondary-link {
+        padding-right: 0;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &__secondary-link {
+    position: relative;
+    position: relative;
+    display: block;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(140, 171, 232, 0.8);
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 1px;
+      height: 12px;
+      background-color: #3f5e9b;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      color: #fbf239;
+    }
   }
 }

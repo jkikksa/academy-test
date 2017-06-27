@@ -4,12 +4,30 @@
   padding-left: 403px;
   padding-right: 200px;
 
+  @media (max-width: $mobile-width) {
+    min-height: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__image {
     position: absolute;
     top: 0;
     left: 70px;
     width: 293px;
     height: 293px;
+
+    @media (max-width: $mobile-width) {
+      position: static;
+      width: auto;
+      height: 162px;
+      margin-bottom: 20px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   &__title {
@@ -20,6 +38,15 @@
     font-size: 34px;
     line-height: 34px;
     color: #123885;
+
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      top: 10px;
+      left: 24px;
+      width: 240px;
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__title-text {
@@ -37,5 +64,21 @@
     font-size: 16px;
     line-height: 20px;
     color: #323232;
+
+    @media (max-width: $mobile-width) {
+      padding-left: 24px;
+      padding-right: 24px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__link {
+    @media (max-width: $mobile-width) {
+      width: calc(100% - 48px);
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

@@ -6,12 +6,22 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-features--mobile.jpg");
+  }
+
   &__inner {
     @include container;
 
     position: relative;
     min-height: 460px;
     padding-top: 130px;
+
+    @media (max-width: $mobile-width) {
+      min-height: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 
   &__title {

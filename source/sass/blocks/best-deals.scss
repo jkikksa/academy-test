@@ -7,12 +7,19 @@
 
     position: relative;
     padding-top: 230px;
+
+    @media (max-width: $mobile-width) {
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__panel {
     position: absolute;
     top: -100px;
     left: 0;
+    box-sizing: border-box;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 40px;
@@ -20,17 +27,30 @@
     padding-right: 85px;
     color: #323232;
     background-color: #eff2f9;
-    box-sizing: border-box;
+
+    @media (max-width: $mobile-width) {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     &::after {
       content: "";
       position: absolute;
       bottom: -15px;
       left: 456px;
+      z-index: 2;
       width: 30px;
       height: 30px;
       background-color: #eff2f9;
       transform: rotate(45deg);
+
+      @media (max-width: $mobile-width) {
+        left: 160px;
+      }
     }
   }
 
@@ -42,13 +62,17 @@
     line-height: 38px;
     text-align: center;
     color: #002672;
+
+    @media (max-width: $mobile-width) {
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   &__list {
     @include list-reset;
 
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -65,6 +89,16 @@
     color: inherit;
     text-decoration: none;
 
+    @media (max-width: $mobile-width) {
+      width: 80px;
+      padding-top: 80px;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -77,9 +111,16 @@
       background-position: center;
       border-radius: 50%;
       transform: translateY(-50%);
+
+      @media (max-width: $mobile-width) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     &--active {
+      color: #123885;
 
       &::before {
         background-color: #fff200;
@@ -151,6 +192,10 @@
     @include list-reset;
 
     padding-bottom: 78px;
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 36px;
+    }
   }
 
   &__descriptions-item {
