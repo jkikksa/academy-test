@@ -21,18 +21,25 @@
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 0;
       z-index: 2;
-      display: flex;
       display: none;
       flex-direction: column;
       box-sizing: border-box;
       width: calc(100% - 24px);
-      padding-top: 100px;
+      padding-top: 60px;
       padding-left: 24px;
       padding-right: 24px;
       color: #ffffff;
       background-color: #123885;
+      z-index: 20;
+      height: 100%;
+      overflow-y: scroll;
+    }
+
+    &--visible {
+      @media (max-width: $mobile-width) {
+        display: flex;
+      }
     }
   }
 
@@ -124,6 +131,16 @@
       margin-left: 0;
       margin-right: 0;
       padding-left: 0;
+      flex-wrap: nowrap;
+      padding-top: 0;
+      padding-bottom: 0;
+      max-width: none;
+    }
+  }
+
+  &__city {
+    @media (max-width: $mobile-width) {
+      padding-bottom: 20px;
     }
   }
 
@@ -175,7 +192,7 @@
 
     @media (max-width: $mobile-width) {
       position: absolute;
-      top: 0;
+      top: 10px;
       left: 13px;
     }
   }
@@ -194,6 +211,8 @@
 
     @media (max-width: $mobile-width) {
       color: rgba(255, 255, 255, 0.2);
+      font-size: 16px;
+      line-height: 16px;
     }
 
     &--active {
