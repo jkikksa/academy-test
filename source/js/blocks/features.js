@@ -1,7 +1,7 @@
 'use strict';
 
 var $ = require('jquery');
-var slick = require('slick-carousel');
+var slick = require('slick-carousel'); // eslint-disable-line
 
 var slider = document.querySelector('.features__list');
 
