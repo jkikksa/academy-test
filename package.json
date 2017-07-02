@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "academy-test",
   "scripts": {
-    "build": "gulp build",
-    "build:production": "cross-env NODE_ENV=production npm run build",
-    "start": "npm run build && gulp serve",
+    "build": "cross-env NODE_ENV=production npm run build:dev",
+    "build:dev": "gulp build",
+    "start": "npm run build:dev && gulp serve",
     "test:style": "stylelint \"source/**/*.scss\" --syntax=scss",
     "test:js": "eslint \"source/js\"",
     "test": "npm run test:style --silent && npm run test:js --silent",
