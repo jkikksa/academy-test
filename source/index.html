@@ -330,7 +330,7 @@
   <div class="callback">
     <div class="callback__inner">
       <div class="callback__top-wrapper">
-        <div class="callback__title">Обратная связь</div>
+        <h2 class="callback__title">Обратная связь</h2>
         <div class="callback__help">?
           <div class="callback__help-tooltip">После обработки сообщения, с Вами свяжется наш менеджер</div>
         </div>
@@ -434,7 +434,70 @@
           <textarea class="field-textarea" name="textarea" rows="4" cols="40" placeholder="Текст обращения"></textarea>
         </div>
         <div class="callback__notice">Все поля обязательны для заполнения</div>
-        <button class="button callback__submit" type="button">Отправить</button>
+        <button class="button callback__submit" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+  <div class="login">
+    <div class="login__inner">
+      <div class="login__top-wrapper">
+        <h2 class="login__title">Личный кабинет</h2>
+        <ul class="login__tabs">
+          <li class="login__tabs-item">
+            <a class="login__tabs-link" href="#">Регистрация</a>
+          </li>
+          <li class="login__tabs-item">
+            <a class="login__tabs-link login__tabs-link--active" href="#">Авторизация</a>
+          </li>
+        </ul>
+        <button class="login__close" type="button">Закрыть окно</button>
+      </div>
+      <form action="#" class="login__form">
+        <ul class="login__inputs-list">
+          <li class="login__inputs-item">
+            <div class="field-text">
+              <label class="field-text__name">
+                <input class="field-text__input" type="text" placeholder="Имя" required="required"/>
+              </label>
+            </div>
+          </li>
+          <li class="login__inputs-item">
+            <div class="field-text">
+              <label class="field-text__name">
+                <input class="field-text__input" type="text" placeholder="Фамилия" required="required"/>
+              </label>
+            </div>
+          </li>
+          <li class="login__inputs-item">
+            <div class="field-text">
+              <label class="field-text__name">
+                <input class="field-text__input" type="email" placeholder="Электронная почта" required="required"/>
+              </label>
+            </div>
+          </li>
+          <li class="login__inputs-item">
+            <div class="field-text">
+              <label class="field-text__name">
+                <input class="field-text__input" type="tel" placeholder="Телефон" required="required"/>
+              </label>
+            </div>
+          </li>
+          <li class="login__inputs-item">
+            <div class="field-text">
+              <label class="field-text__name">
+                <input class="field-text__input" type="password" placeholder="Пароль" required="required"/>
+              </label>
+            </div>
+          </li>
+          <li class="login__inputs-item">
+            <div class="field-text">
+              <label class="field-text__name">
+                <input class="field-text__input" type="password" placeholder="Подтвердите пароль" required="required"/>
+              </label>
+            </div>
+          </li>
+        </ul>
+        <button class="login__submit" type="submit">Зарегистрироваться</button>
       </form>
     </div>
   </div>

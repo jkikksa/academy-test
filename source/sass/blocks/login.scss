@@ -1,0 +1,218 @@
+.login {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 44;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: $mobile-width) {
+    background-color: #ffffff;
+  }
+
+  &--visible {
+    display: flex;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
+
+  &__inner {
+    padding-top: 27px;
+    padding-bottom: 26px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    width: 704px;
+
+    @media (max-width: $mobile-width) {
+      width: auto;
+    }
+  }
+
+  &__top-wrapper {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+
+    @media (max-width: $mobile-width) {
+      width: 26px;
+      height: 20px;
+      background-image: url("../img/inline/arrow-left--blue.png");
+      background-repeat: no-repeat;
+      right: auto;
+      left: 0;
+      top: -4px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 28.2px;
+      height: 1px;
+      background-color: #141414;
+      transform: translate(-50%, -50%) rotate(45deg);
+
+      @media (max-width: $mobile-width) {
+        content: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1px;
+      height: 28.2px;
+      background-color: #141414;
+      transform: translate(-50%, -50%) rotate(45deg);
+
+      @media (max-width: $mobile-width) {
+        content: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 34px;
+    color: #123885;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media (max-width: $mobile-width) {
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 20px;
+      padding-left: 35px;
+    }
+  }
+
+  &__tabs {
+    @include list-reset;
+
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #8eaff2;
+    border-radius: 20px;
+  }
+
+  &__tabs-item {
+    flex-grow: 1;
+  }
+
+  &__tabs-link {
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #123885;
+    text-decoration: none;
+
+    @media (max-width: $mobile-width) {
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 12px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    &--active {
+      color: #ffffff;
+      background-color: #123885;
+    }
+  }
+
+  &__form {
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 31px;
+    padding-left: 35px;
+    padding-right: 35px;
+    text-align: center;
+    background-color: #eff2f9;
+
+    @media (max-width: $mobile-width) {
+      padding-left: 17px;
+      padding-right: 17px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__inputs-list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
+
+  &__inputs-item {
+    width: 282px;
+    margin-bottom: 18px;
+
+    @media (max-width: $mobile-width) {
+      width: auto;
+    }
+  }
+
+  &__submit {
+    width: 272px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #123885;
+    text-decoration: none;
+    background-color: transparent;
+    border: 3px solid #123885;
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+}

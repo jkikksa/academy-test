@@ -1,6 +1,7 @@
 'use strict';
 
 require('./blocks/best-deals');
+require('./blocks/login');
 require('./blocks/callback');
 require('./blocks/features');
 require('./blocks/main-nav');
