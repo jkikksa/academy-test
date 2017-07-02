@@ -19,8 +19,8 @@
 
     @media (max-width: $mobile-width) {
       min-height: 0;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 7px;
+      padding-bottom: 7px;
     }
   }
 
@@ -36,7 +36,7 @@
     @include list-reset;
 
     position: absolute;
-    bottom: 226px;
+    bottom: 234px;
     left: 0;
     display: flex;
     justify-content: center;
@@ -44,11 +44,15 @@
     height: 16px;
     pointer-events: none;
 
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+
     button {
       position: relative;
       box-sizing: content-box;
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       padding: 0;
       font-size: 0;
       background-color: transparent;
@@ -86,7 +90,7 @@
 
   &__controls {
     position: absolute;
-    top: 50%;
+    top: 210px;
     left: 0;
     display: flex;
     justify-content: space-between;
@@ -95,8 +99,12 @@
     height: 42px;
     padding-left: 44px;
     padding-right: 44px;
-    transform: translateY(-50%);
     pointer-events: none;
+
+    @media (max-width: $mobile-width) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__arrow {
@@ -120,6 +128,12 @@
       background-image: url("../img/inline/icon-arrow-right.png");
       background-repeat: no-repeat;
       transform: translateY(-50%);
+
+      @media (max-width: $mobile-width) {
+        width: 12px;
+        height: 20px;
+        background-size: 12px 20px;
+      }
     }
 
     &--prev {

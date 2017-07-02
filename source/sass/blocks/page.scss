@@ -1,25 +1,25 @@
 .page {
-  font-family: "Roboto", "Arial", sans-serif;
+  min-width: 320px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 400;
-  min-width: 320px;
+  font-family: "Roboto", "Arial", sans-serif;
 
   &--no-scroll {
     position: fixed;
-    left: 0;
     top: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     overflow: hidden;
   }
 
   &--no-scroll-modal {
     position: fixed;
-    left: 0;
     top: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     overflow: hidden;
   }
 }

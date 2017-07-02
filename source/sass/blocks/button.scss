@@ -4,7 +4,7 @@
   padding-top: 17px;
   padding-bottom: 17px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 34px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -12,6 +12,7 @@
   text-decoration: none;
   background-color: transparent;
   border: 3px solid #123885;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     display: block;

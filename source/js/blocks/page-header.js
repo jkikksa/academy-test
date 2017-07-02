@@ -1,9 +1,12 @@
 'use strict';
 
 var body = document.querySelector('.page');
-var nav = body.querySelector('.page-header__inner');
-var openBtn = body.querySelector('.page-header__open');
+var header = body.querySelector('.page-header');
+var nav = header.querySelector('.page-header__inner');
+var openBtn = header.querySelector('.page-header__open');
 var closeBtn = nav.querySelector('.page-header__close');
+
+header.classList.remove('page-header--no-js');
 
 var openNav = function () {
   nav.classList.add('page-header__inner--visible');

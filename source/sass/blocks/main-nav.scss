@@ -45,6 +45,7 @@
       position: relative;
       padding-left: 0;
       padding-right: 28px;
+      font-size: 16px;
       color: #fbf239;
 
       &::after {
@@ -94,14 +95,14 @@
 
     @media (max-width: $mobile-width) {
       display: block;
-      padding-bottom: 30px;
+      padding-bottom: 25px;
     }
   }
 
   &__sub-link {
     display: block;
     font-size: 14px;
-    line-height: 26px;
+    line-height: 24px;
     color: rgba(140, 171, 232, 0.8);
     text-decoration: none;
 
@@ -118,7 +119,7 @@
     @media (max-width: $mobile-width) {
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 65px;
     }
   }
 
@@ -137,7 +138,6 @@
   }
 
   &__secondary-link {
-    position: relative;
     position: relative;
     display: block;
     padding-right: 20px;
